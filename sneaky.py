@@ -8,12 +8,6 @@
 # Sneaky builds a list of scanned servers on SSLlabs (www.ssllabs.com). 
 # On killing the program, the list of servers is written to an output file
 #
-# Why did I write this?
-# Scanning servers on ssllabs.com is a quick way to test the security of 
-# your SSL servers. However, the list of servers recently scanned are displayed
-# on ssllabs. This is a POC to demonstrate how someone can build a list of servers 
-# scanned using ssllabs.
-#
 #-----------------------------------------------------------------------
 
 #------------------------OPTIONS----------------------------
