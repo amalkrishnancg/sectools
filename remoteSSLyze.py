@@ -32,7 +32,7 @@ INSTRUCTIONS = "Example: <b>www.google.com:443</b> or <b>www.google.com</b> (def
 INVALID_URL = 'Enter a valid url. Don\'t be naughty'
 ERROR_URL = 'Unable to access URL. Are you sure the server is up?'
 XSS_TAUNT = '<script> alert("1") </script> <img src="http://i.qkme.me/3rk3fq.jpg" alt="derp" />'
-SQL_INJ_TAUNT = '<img src="http://i.qkme.me/3rk3l2.jpg" alt="derp" />'
+SQL_INJ_TAUNT = '<img src="http://i.qkme.me/3rlosu.jpg" alt="derp" />'
 COOKIE_TAUNT = 'bovjna=Guvf vf abg gur pbbxvr lbh\'er ybbxvat sbe'
 UNSUPPORTED_METHOD = ' method is not supported. Don\'t be naughty '
 MESSAGE_404 = '<img src=\'http://i.qkme.me/3rjyzb.jpg\' alt=\'404 Page not found\' />'
