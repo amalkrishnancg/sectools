@@ -69,7 +69,8 @@ def run_sslyze():
     else: # request is not a GET or POST
         return request.method + UNSUPPORTED_METHOD
     # Validate URL 
-    # Unnecessary security taunts------------------- 
+    
+    # <Unnecessary security taunts (remove in prod)---
     if (re.match('.*(<|>)+.*', url)):
         print request.remote_addr + ' entered ' + url 
         return XSS_TAUNT
@@ -77,7 +78,8 @@ def run_sslyze():
         print request.remote_addr + ' entered ' + url
         return SQL_INJ_TAUNT
     response.set_header('Set-Cookie', COOKIE_TAUNT)
-    #----------------------------------------------->
+    #-----------------------------------------------/>
+    
     #TODO: Find a better way to handle an invalid URL though this works exceptionally well
     try:
         connection = httplib.HTTPConnection(url, timeout=1)

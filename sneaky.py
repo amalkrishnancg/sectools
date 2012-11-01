@@ -17,15 +17,14 @@ QUERY_INTERVAL_SECS = 10
 OUTPUT_FILE = './serverlist.txt'
 #-----------------------------------------------------------
 
-import re
-import urllib2
-import signal
-import sys
-import time
+import re # for scanning server urls from html page
+import urllib2 # for accessing page contents at QUERY_LOCATION
+import signal # for capturing CTRL-C 
+import sys # for sys.exit()
 
-from HTMLParser import HTMLParser
-from htmlentitydefs import name2codepoint
-from time import gmtime, strftime
+from HTMLParser import HTMLParser # for parsing content from QUERY_LOCATION
+from htmlentitydefs import name2codepoint # for handling entity definitions
+from time import gmtime, strftime, sleep # for formatting time and sleeping
 
 # This class parses the list of recently scanned servers
 class SSLLabsParser(HTMLParser):
@@ -73,7 +72,7 @@ def main():
 	print "\n--------------" + strftime("%d %b %Y %H:%M:%S", gmtime()) + "--------------"
 	for server in ContentManager.scanned_servers:
 	    print server+"\n"
-	time.sleep(QUERY_INTERVAL_SECS)
+	sleep(QUERY_INTERVAL_SECS)
 
 # Function writes list of servers to file on termination
 def exit_handler(signum, frame):
